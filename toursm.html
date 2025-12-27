@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSB Cabs - Tirunelveli Tourism</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<!-- SEO -->
+<meta name="keywords" content="
+Tirunelveli tourism,
+Kutralam waterfalls tour,
+Papanasam dam trip,
+Navathirupathi temples,
+Tirunelveli tourist places,
+RSB cabs tourism,
+Nava thirupathi tour package,
+Kutralam tour cab,
+Papanasam tourist places,
+Tenkasi tourist cabs">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+   <div class="logo-area">
+        <img src="logo.png" alt="RSB Cabs Logo">
+        <span class="brand-name">RSB CABS</span>
+    </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="toursm.html" class="active" style="color: blue;">Tourism</a>
+    <a href="service.html">service</a>
+    <a href="#contact">Contact</a>
+    <a href="#" class="btn" onclick="openform()">Book Now</a>
+  </nav>
+</header>
+
+
+<!-- HERO IMAGE BELOW NAVBAR -->
+<section class="hero-banner">
+  <img src="tourism.jpeg" alt="RSB Cabs Travel Banner">
+</section>
+
+<section class="packages" style="background: linear-gradient(135deg, #89f7fe 0%, #89f7fe 50%, #66a6ff 100%);">
+
+  <section class="package-card">
+    <img src="airport.jpg" alt="Airport Package">
+    <h3>Airport Package</h3>
+  </section>
+
+  <section class="package-card">
+    <img src="business.jpg" alt="Business Package">
+    <h3>Business Package</h3>
+  </section>
+
+  <a href="temples.html" class="package-card">
+    <img src="temple.jpg" alt="Temple Package">
+    <h3>Temple Package</h3>
+  </a>
+
+  <a href="tour.html" class="package-card">
+    <img src="falls.jpg" alt="Tour Package">
+    <h3>Tour Package</h3>
+  </a>
+
+  <section class="package-card">
+    <img src="wedding.jpeg" alt="Wedding Package">
+    <h3>Wedding Package</h3>
+  </section>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left – Navigation Links -->
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tourism.html">Tourism</a>
+      <a href="service.html">service</a>
+      <a href="#" class="footer-book-btn" onclick="openform()">Book Now</a>
+    </div>
+
+    <!-- Right – Social Icons -->
+    <div class="footer-social">
+      <a href="https://wa.me/7305952018" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:7305952018"><i class="fas fa-phone-alt"class="phone"></i></a>
+      <a href="mailto:rsbcabstravels@gmail.com"class="gmail"><i class="fas fa-envelope"></i></a>
+    </div>
+
+  </div>
+
+  <div class="footer-copy">
+    © 2025 RSB Cabs & Travels – All Rights Reserved
+  </div>
+</footer>
+
+
+<!-- ===== POPUP FORM ===== -->
+<div id="bookingForm" class="popup">
+    <div class="popup-content">
+        <h2>Book Your Ride</h2>
+
+        <label>Name</label>
+        <input type="text" id="custName" placeholder="Enter your name">
+
+        <label>Mobile Number</label>
+        <input type="text" id="custMobile" placeholder="Enter mobile number">
+
+        <label>Description</label>
+        <textarea id="custMsg" placeholder="Pickup, drop, time, etc..."></textarea>
+
+        <button onclick="sendWhatsApp()" class="submit-btn">Submit</button>
+        <button onclick="closeForm()" class="close-btn">Close</button>
+    </div>
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+function openform() {
+    document.getElementById("bookingForm").style.display = "flex";
+}
+
+function closeForm() {
+    document.getElementById("bookingForm").style.display = "none";
+}
+
+// Book Now button click
+document.getElementById("bookBtn").addEventListener("click", function (e) {
+    e.preventDefault(); // Link jump prevent
+    openform(); // Popup open
+});
+
+function sendWhatsApp() {
+    let name = document.getElementById("custName").value;
+    let mobile = document.getElementById("custMobile").value;
+    let msg = document.getElementById("custMsg").value;
+
+    let finalMessage =
+        `RSB CABS BOOKING REQUEST:%0A%0AName: ${name}%0AMobile: ${mobile}%0ADetails: ${msg}`;
+
+    let phone = "7305952018";
+    window.open(`https://wa.me/${phone}?text=${finalMessage}`, "_blank");
+}
+</script>
+</body>
+</html>
