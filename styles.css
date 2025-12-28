@@ -47,13 +47,13 @@ background: linear-gradient(135deg, #89f7fe 0%, #89f7fe 50%, #66a6ff 100%);
 }
 
 /* THE RSB CABS TEXT */
-.brand-name {
+/* THE RSB CABS TEXT */
+.brand-name{
+    font-family: 'Pacifico', cursive; /* or 'Lobster' */
     font-size: 42px;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
+    color: #ff1f7a; /* pink */
     letter-spacing: 2px;
-    color: #ff007f; /* Pink + Attractive */
-    text-transform: uppercase;
+    font-weight: normal;
 }
 .popup-content {
     background: #fff;
@@ -1024,6 +1024,7 @@ welcome-text{
     gap: 20px;
   }
 }
+
 
 
 
